@@ -121,7 +121,7 @@ const ScreenOne = () => {
                     <SelectItem value="banana">Postman</SelectItem>
                     <SelectItem value="blueberry">Illustrator</SelectItem>
                   </SelectGroup>
-                </SelectContent> 
+                </SelectContent>
               </Select>
             </div>
             <div className="flex gap-8">

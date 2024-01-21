@@ -90,13 +90,26 @@
   border: 1px solid rgba(236, 162, 255, 0.2); 
   box-shadow: 0px 0px 10px rgba(5, 43, 148, 0.2); 
 }
+.glass2 {
+  background-color: rgba(251, 239, 255, 0.1); 
+  backdrop-filter: blur(4px); 
+}
+.colorDisplay{
+  @apply flex justify-between  bg-purple-950 glass2 px-2 py-2 rounded-md text-sm
+}
+.normalDisplay{
+  @apply flex justify-between   px-2 py-2 rounded-md text-sm
+}
+.text-gradient{
+  @apply bg-gradient-to-r from-purple-500 to-purple-800 bg-clip-text text-transparent
+}
 .glassBlock1 {
-  background-color: rgba(129, 123, 0, 0.5); 
+  background-color: rgba(160, 152, 0, 0.5); 
   backdrop-filter: blur(4px); 
   border: 1px solid rgba(129, 123, 0,  0.2); 
 }
 .glassBlock2 {
-  background-color: rgba(37, 0, 129, 0.5); 
+  background-color: rgba(50, 1, 172, 0.705); 
   backdrop-filter: blur(4px); 
   border: 1px solid rgba(37, 0, 129, 0.2); 
 }

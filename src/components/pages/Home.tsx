@@ -1,19 +1,10 @@
 import Hero from "../Hero";
 import ScreenCard from "../shared/ScreenCard";
 
+import { tasks } from "@/utils/data.ts";
+
 const Home = () => {
-  const tasks = [
-    {
-      title: "Task 1",
-      desc: "Form with validation",
-      link:"screenone"
-    },
-    {
-      title: "Task 2",
-      desc: "Blockchain explorer",
-        link:"screentwo"
-    },
-  ];
+  
   return (
     <div className="pt-16 pb-12 min-h-screen w-full bg-hero-pattern bg-cover bg-no-repeat ">
       <Hero />

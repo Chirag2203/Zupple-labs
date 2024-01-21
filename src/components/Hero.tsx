@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className=" relative md:w-3/4 md:mx-auto mx-4  flex flex-col items-center ">
       <div className="py-16 text-5xl gap-4 font-extrabold flex flex-col items-center">
-        <p className="bg-gradient-to-r from-purple-500 to-purple-800 text-6xl  bg-clip-text text-transparent">
+        <p className="text-gradient text-6xl  ">
           CRYPTO <span className="text-7xl -ml-4 ">X</span>
         </p>
         <p className="font-semibold text-center">Everything Crypto at one place</p>
