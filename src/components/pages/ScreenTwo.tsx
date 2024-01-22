@@ -13,6 +13,8 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import  {motion} from "framer-motion";
+import {fadeIn, slideIn } from "@/utils/motion.js";
 
 import { block1Data, block2Data, transactionsData } from "@/utils/data.ts";
 import { useState } from "react";
@@ -31,7 +33,11 @@ const ScreenTwo = () => {
       </p>
       <div className="flex flex-col items-center w-full  ">
         <div className="flex lg:flex-row flex-col gap-4">
-          <div className="flex md:flex-row flex-wrap justify-center lg:justify-start gap-2 md:mt-8">
+          <motion.div 
+          initial="hidden"
+          animate="show"
+          variants={fadeIn("right", "tween", 0, 1)}
+           className="flex md:flex-row flex-wrap justify-center lg:justify-start gap-2 md:mt-8">
             {block1Data.map((data, index) => (
               <div
                 key={index}
@@ -47,15 +53,18 @@ const ScreenTwo = () => {
                 <p className="text-xs ">In {data.time} minutes</p>
               </div>
             ))}
-          </div>
-          <div className="flex md:flex-row flex-wrap justify-center lg:justify-start gap-2">
+          </motion.div>
+          <motion.div 
+          initial="hidden"
+          animate="show"
+          variants={fadeIn("left", "tween", 0, 1)}
+          className="flex md:flex-row flex-wrap justify-center lg:justify-start gap-2">
             {block2Data.map((data, index) => (
               <div className="flex flex-col gap-2 items-center ">
                 <div className="text-purple-300">{data.hash}</div>
                 <div
                   key={index}
-                  className="glassBlock2 w-26 h-26 p-4 gap-1 rounded-lg flex flex-col justify-center items-center"
-                >
+                  className="glassBlock2 w-26 h-26 p-4 gap-1 rounded-lg flex flex-col justify-center items-center">
                   <p className="text-xs ">{data.num1} sat/vB</p>
                   <div className="flex items-center gap-1 text-xs">
                     <p className="text-xs ">{data.num2a}</p>-
@@ -67,7 +76,7 @@ const ScreenTwo = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         <div className="flex flex-col items-start border-t-2  mt-16 w-full md:w-4/5">
@@ -109,11 +118,15 @@ const ScreenTwo = () => {
                 </PaginationContent>
               </Pagination>
             </div>
-            <div className="flex flex-col gap-8 w-full">
+            <motion.div 
+            initial="hidden"
+            animate="show"
+            variants={fadeIn("up", "tween", 0, 1)}
+            className="flex flex-col gap-8 w-full">
               {transactionsData.map((data, index) => (
                 <TransactionCard key={index} data={data} index={index} />
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

@@ -90,6 +90,13 @@
   border: 1px solid rgba(236, 162, 255, 0.1); 
   box-shadow: 0px 0px 10px rgba(5, 43, 148, 0.2); 
 }
+.glassForm {
+  background-color: rgba(90, 0, 117, 0.1); 
+  backdrop-filter: blur(6px); 
+  border: 1px solid rgba(236, 162, 255, 0.1); 
+  box-shadow: 0px 0px 10px rgba(61, 31, 87, 0.2); 
+}
+
 .glass2 {
   background-color: rgba(251, 239, 255, 0.1); 
   backdrop-filter: blur(4px); 

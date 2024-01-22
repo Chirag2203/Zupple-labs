@@ -1,6 +1,7 @@
 /*
 Used ShadCn for form components, Typescript for typesafe code
 Axios for sending data to server, TailwindCSS for styling
+framer motion for animations
 
 validateForm() function validates the user input and returns true if all the fields are valid, 
 else returns false.
@@ -29,6 +30,9 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import  {motion} from "framer-motion";
+import {fadeIn } from "@/utils/motion.js";
+
 
 import { useState } from "react";
 import { CalendarIcon } from "lucide-react";
@@ -135,12 +139,15 @@ const ScreenOne = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-tr from-black to-col3 pt-24 flex flex-col items-center sm:px-0 px-4 form-bg">
-      <div className="glass rounded-lg sm:w-4/5   w-full  flex flex-col items-center py-4">
+      <div className="glassForm rounded-lg sm:w-4/5   w-full  flex flex-col items-center py-4">
         <p className="text-sm">UIDesignDaily</p>
         <p className="text-xl md:mt-8 font-medium">Upload Files</p>
 
         {/* form begins */}
-        <form
+        <motion.form
+            initial="hidden"
+            animate="show"
+            variants={fadeIn("down", "tween", 0, 1)}
           className="flex md:flex-row flex-col gap-8 w-full md:px-16 px-4 mt-12 justify-center"
           onSubmit={handleSubmit}
         >
@@ -197,7 +204,7 @@ const ScreenOne = () => {
           </div>
           <div className="lg:w-1/3 md:w-1/2 flex flex-col gap-4">
             <div className="grid w-full  items-center gap-2">
-              <Label htmlFor="tags" className="form-label">
+              <Label htmlFor="tags" className="form-label ">
                 Tags[comma seperated]{" "}
                 {errors.tags && (
                   <span className="text-red-400">({errors.tags})</span>
@@ -208,7 +215,7 @@ const ScreenOne = () => {
                 value={tags}
                 onChange={(e) => setTags(e.target.value)}
                 type="text"
-                className="glassInpt"
+                className="glassInpt "
                 placeholder="Tags [comma seperated]"
               />
             </div>
@@ -255,7 +262,7 @@ const ScreenOne = () => {
                 id="softwares"
                 value={software}
                 onChange={(e) => setSoftware(e.target.value)}
-                className="glassInpt px-2 py-2 rounded-md focus:border-purple-400 focus:ring-1 focus:ring-purple-300 focus:outline-none"
+                className="glassInpt px-2 py-2 text-sm text-slate-500 rounded-md focus:border-purple-400 focus:ring-1 focus:ring-purple-300 focus:outline-none"
               >
                 <option value="" className="text-black">
                   Select a Software
@@ -289,7 +296,7 @@ const ScreenOne = () => {
                     id="fileInput1"
                     name="fileInput1"
                     className="sr-only md:w-auto w-3/4"
-                    accept=".pdf, .doc, .docx"
+                    accept=" .png, jpg, jpeg"
                     onChange={handleFileChange1}
                   />
                   <Label
@@ -329,7 +336,7 @@ const ScreenOne = () => {
               </div>
             </div>
           </div>
-        </form>
+        </motion.form>
         <Button
           className="bg-gradient-to-r  from-purple-500 to-purple-800 md:w-1/3 w-2/3 mt-8 hover:to-purple-700"
           type="submit"

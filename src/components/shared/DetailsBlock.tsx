@@ -1,3 +1,6 @@
+// shows the details of a particular transaction on explorer page
+// handleClick is used to close the details block
+
 import React from 'react'
 import { FaClipboard } from 'react-icons/fa'
 import { IoMdCloseCircle } from 'react-icons/io'

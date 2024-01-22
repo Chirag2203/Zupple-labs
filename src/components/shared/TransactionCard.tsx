@@ -1,8 +1,11 @@
+// Shows the transactions data in a card format on explorer page
+
 import { TransactionsData } from "@/lib/Types";
 import React from "react";
 import {
   FaArrowAltCircleDown,
   FaArrowAltCircleRight,
+  FaRegArrowAltCircleDown,
   FaRegArrowAltCircleUp,
 } from "react-icons/fa";
 import { IoMdCloseCircle } from "react-icons/io";
@@ -16,7 +19,7 @@ interface TransactionCardProps {
   return (
     <div className="flex flex-col gap-2 text-sm" key={index}>
       <div className="flex sm:flex-row flex-col justify-between glass py-2 px-4 rounded-tr-md rounded-tl-md">
-        <p className="text-purple-400 ">{data.hash}</p>
+        <p className="text-pink-400 ">{data.hash}</p>
         <p className="">{data.timeStamp}</p>
       </div>
       <div className="flex lg:flex-row flex-col justify-between glass py-2 px-4 rounded-br-md rounded-bl-md">
@@ -47,7 +50,7 @@ interface TransactionCardProps {
                 {each.tradePositive && each.tradeComplete ? (
                   <FaRegArrowAltCircleUp className="text-green-500" />
                 ) : !each.tradePositive && each.tradeComplete ? (
-                  <FaArrowAltCircleDown className="text-red-500" />
+                  <FaRegArrowAltCircleDown className="text-red-500" />
                 ) : !each.tradeComplete ? (
                   <IoMdCloseCircle className="opacity-70" />
                 ) : (

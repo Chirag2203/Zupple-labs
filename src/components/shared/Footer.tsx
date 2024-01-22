@@ -17,7 +17,7 @@ const Footer = () => {
             <a href="https://chiragrajput.in" className="hover:text-col2">
               About me
             </a>
-            <Link to={"#"} className="hover:text-col2">
+            <Link to={"https://github.com/Chirag2203/Zupple-labs"} className="hover:text-col2">
               Source code
             </Link>
           </ul>

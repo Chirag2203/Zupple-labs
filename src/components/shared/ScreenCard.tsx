@@ -1,3 +1,5 @@
+// 3D perspective card for the home page
+
 import { Tilt } from "react-tilt";
 import {Link} from "react-router-dom";
 const ScreenCard = ({

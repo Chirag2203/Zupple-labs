@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
-
-// import { styles } from "../styles";
+import {fadeIn } from "@/utils/motion.js";
 
 const Hero = () => {
   return (
-    <section className=" relative md:w-3/4 md:mx-auto mx-4  flex flex-col items-center ">
+    <motion.section 
+    initial="hidden"
+    animate="show"
+    variants={fadeIn("down", "tween", 0, 1)}
+    className=" relative md:w-3/4 md:mx-auto mx-4  flex flex-col items-center ">
       <div className="py-16 text-5xl gap-4 font-extrabold flex flex-col items-center">
         <p className="text-gradient text-6xl  ">
           CRYPTO <span className="text-7xl -ml-4 ">X</span>
@@ -24,7 +27,7 @@ const Hero = () => {
           Know more
         </Button>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
