@@ -1,3 +1,9 @@
+/*
+This is the home page of the application
+Navigate to Form or Task 1 to see the first task
+Navigate to Explorer or Task 2 to see the second task
+*/
+
 import Hero from "../Hero";
 import ScreenCard from "../shared/ScreenCard";
 

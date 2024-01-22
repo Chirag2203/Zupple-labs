@@ -76,8 +76,8 @@ export const block1Data:Block1Data[] = [
 
   export const transactionsData:TransactionsData[] = [
     {
-      hash: "01288789741227661786776261766qwertyui",
-      hash2: "01288789747661786776261766",
+      hash: "012887897412276617867762617",
+      hash2: "Coinbase (newly generated coins)",
       timeStamp: "2021-01-23 08:47 ",
       transaction: [
         {
@@ -108,7 +108,7 @@ export const block1Data:Block1Data[] = [
       },
     },
     {
-      hash: "01288789747661786776261766qw1212ertyui",
+      hash: "01288789747661786776261766qw12",
       hash2: "01288789747661786776261766",
       timeStamp: "2021-01-23 08:47 ",
       transaction: [
@@ -133,7 +133,7 @@ export const block1Data:Block1Data[] = [
       },
     },
     {
-      hash: "01288789747661786776261766qwerty1313ui",
+      hash: "01288789747661786776261766qwerty",
       hash2: "01288789747661786776261766",
       timeStamp: "2021-01-23 08:47 ",
       transaction: [

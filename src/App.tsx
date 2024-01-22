@@ -9,11 +9,13 @@ const App = () => {
     <div className="text-white">
       <Router>
         <Header/>
+          <div className=" ">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/screenone" element={<ScreenOne />} />
           <Route path="/screentwo" element={<ScreenTwo />} />
         </Routes>
+          </div>
         <Footer/>
       </Router>
     </div>

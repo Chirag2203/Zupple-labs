@@ -44,7 +44,7 @@ const Header = () => {
 
   return (
     <nav
-      className={`px-8 px md:px-32 md:mx-auto  w-full flex items-center py-5 fixed top-0 z-20 ${
+      className={`px-8  px md:px-32 md:mx-auto  w-full flex items-center py-5 fixed top-0 z-20 ${
         scrolled ? " navGlass" : "bg-transparent"
       }`}
     >

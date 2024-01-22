@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin")
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -21,6 +22,7 @@ module.exports = {
         "hero-pattern": "url('/src/assets/herobg.png')",
       },
       colors: {
+        
         col1: "#050816",
         col2: "#aaa6c3",
         col3: "#151030",
@@ -84,5 +86,22 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"),  require('@codaworks/react-glow/tailwind')],
+  // plugins: [require("tailwindcss-animate"),  require('@codaworks/react-glow/tailwind')],
+  plugins: [
+    // require("@tailwindcss/typography"),
+    plugin(
+      function ({ addVariant }) {
+        addVariant("glow", ".glow-capture .glow-overlay &")
+      },
+      {
+        theme: {
+          extend: {
+            colors: {
+              glow: "color-mix(in srgb, var(--glow-color) calc(<alpha-value> * 100%), transparent)",
+            },
+          },
+        },
+      }
+    ),
+  ],
 }
