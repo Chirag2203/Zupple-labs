@@ -114,6 +114,8 @@ Amazon S3 Deployment- http://zupplelabsassign.s3-website.ap-south-1.amazonaws.co
 
 Netlify Deployment- https://chirag-zupplelabs.netlify.app/
 
+Project video-  https://youtu.be/HK9cyoBgqwU
+
 
 
 
