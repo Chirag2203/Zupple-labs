@@ -110,6 +110,7 @@ This page is mobile responsive, and I have tried enhancing the design of the Exp
 ## Deployment
 This application is deployed on AWS S3 and can be accessed using the following link.
 Amazon S3 Deployment- http://zupplelabsassign.s3-website.ap-south-1.amazonaws.com/
+
 Netlify Deployment- https://chirag-zupplelabs.netlify.app/
 
 
