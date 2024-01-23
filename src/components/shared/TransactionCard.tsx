@@ -3,7 +3,6 @@
 import { TransactionsData } from "@/lib/Types";
 import React from "react";
 import {
-  FaArrowAltCircleDown,
   FaArrowAltCircleRight,
   FaRegArrowAltCircleDown,
   FaRegArrowAltCircleUp,

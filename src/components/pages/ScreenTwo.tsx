@@ -14,7 +14,7 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import  {motion} from "framer-motion";
-import {fadeIn, slideIn } from "@/utils/motion.js";
+import {fadeIn } from "@/utils/motion.js";
 
 import { block1Data, block2Data, transactionsData } from "@/utils/data.ts";
 import { useState } from "react";

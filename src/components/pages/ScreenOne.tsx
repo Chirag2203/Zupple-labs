@@ -1,6 +1,6 @@
 /*
 Used ShadCn for form components, Typescript for typesafe code
-Axios for sending data to server, TailwindCSS for styling
+Axios for sending data to server, TailwindCSS for styling and
 framer motion for animations
 
 validateForm() function validates the user input and returns true if all the fields are valid, 
@@ -59,7 +59,7 @@ const ScreenOne = () => {
     software: "",
   });
 
-  //validates the user input
+  //validates the user input 
   const validateForm = () => {
     console.log("Validating form...");
     const newErrors = {
