@@ -109,6 +109,8 @@ This page is mobile responsive, and I have tried enhancing the design of the Exp
 
 ## Deployment
 This application is deployed on AWS S3 and can be accessed using the following link.
+Amazon S3 Deployment- http://zupplelabsassign.s3-website.ap-south-1.amazonaws.com/
+Netlify Deployment- https://chirag-zupplelabs.netlify.app/
 
 
 
@@ -118,7 +120,7 @@ I Love working on user-centric products and new technologies. I mainly use the M
 
 Even if I don't know about a particular thing, I am sure that somehow I will be able to solve that problem, either by reading 100 articles or by taking someone's help.
 
-I also do freelancing and have done many projects in the past 6 months.
+I also freelance and have done many projects in the past 6 months.
 
 I published a paper on software reliability under IEEE during my last semester.
 
