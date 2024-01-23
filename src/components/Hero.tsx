@@ -11,13 +11,13 @@ const Hero = () => {
       className=" relative md:w-3/4 md:mx-auto mx-4  flex flex-col items-center "
     >
       <div className="py-16 text-5xl gap-4 font-extrabold flex flex-col items-center">
-        <p className="text-gradient text-6xl  ">
-          CRYPTO <span className="text-7xl -ml-4 ">X</span>
+        <p className="text-gradient sm:text-6xl text-5xl  ">
+          CRYPTO <span className="sm:text-7xl  sm:-ml-4 ">X</span>
         </p>
-        <p className="font-semibold text-center">
+        <p className="font-semibold text-center sm:text-5xl text-4xl">
           Everything Crypto at one place
         </p>
-        <p className="text-lg text-col2 font-normal">
+        <p className="text-lg text-col2 font-normal text-center">
           Zupple Labs Assignment By Chirag Rajput
         </p>
       </div>
