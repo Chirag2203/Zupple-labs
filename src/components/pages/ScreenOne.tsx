@@ -14,7 +14,7 @@ hey store the file in the state.
 
 */
 
-import axios from "axios";
+// import axios from "axios";
 
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -30,9 +30,8 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import  {motion} from "framer-motion";
-import {fadeIn } from "@/utils/motion.js";
-
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion.js";
 
 import { useState } from "react";
 import { CalendarIcon } from "lucide-react";
@@ -59,7 +58,7 @@ const ScreenOne = () => {
     software: "",
   });
 
-  //validates the user input 
+  //validates the user input
   const validateForm = () => {
     console.log("Validating form...");
     const newErrors = {
@@ -145,9 +144,9 @@ const ScreenOne = () => {
 
         {/* form begins */}
         <motion.form
-            initial="hidden"
-            animate="show"
-            variants={fadeIn("down", "tween", 0, 1)}
+          initial="hidden"
+          animate="show"
+          variants={fadeIn("down", "tween", 0, 1)}
           className="flex md:flex-row flex-col gap-8 w-full md:px-16 px-4 mt-12 justify-center"
           onSubmit={handleSubmit}
         >
@@ -243,8 +242,10 @@ const ScreenOne = () => {
                 <PopoverContent className="w-auto p-0" align="start">
                   <Calendar
                     mode="single"
-                    selected={date}
-                    onSelect={setDate}
+                    selected={date || undefined}
+                    onSelect={(value: Date | undefined) =>
+                      setDate(value || null)
+                    }
                     initialFocus
                   />
                 </PopoverContent>
@@ -282,6 +283,7 @@ const ScreenOne = () => {
               </select>
             </div>
             {/* file input */}
+            {/* thumbnail can only be a image and source file can be a document or pdf */}
             <div className="flex flex-row lg:gap-8 gap-2">
               <div className="grid w-full md:flex-row flex-col  gap-1.5">
                 <Label htmlFor="fileInput1" className="form-label">

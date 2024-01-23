@@ -10,11 +10,11 @@ import {
 import { IoMdCloseCircle } from "react-icons/io";
 
 interface TransactionCardProps {
-    data: TransactionsData;
-    index: number;
-  }
-  
-  const TransactionCard: React.FC<TransactionCardProps> = ({ data, index }) => {
+  data: TransactionsData;
+  index: number;
+}
+
+const TransactionCard: React.FC<TransactionCardProps> = ({ data, index }) => {
   return (
     <div className="flex flex-col gap-2 text-sm" key={index}>
       <div className="flex sm:flex-row flex-col justify-between glass py-2 px-4 rounded-tr-md rounded-tl-md">

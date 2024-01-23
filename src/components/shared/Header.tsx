@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-// import { styles } from "../styles";
-// import { navLinks } from "../constants";
 import close from "../../assets/close.svg";
 import menu from "../../assets/menu.svg";
 
@@ -13,6 +11,7 @@ const Header = () => {
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  // navigation links
   const navLinks = [
     {
       title: "Home",
@@ -27,6 +26,8 @@ const Header = () => {
       id: "screentwo",
     },
   ];
+  
+  //   for fixing the navbar after the user scrolls down
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;

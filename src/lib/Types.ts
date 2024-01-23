@@ -20,14 +20,14 @@ interface BlockData {
     changeAmount: string;
   }
   
-  interface TransactionData {
-    hash: string;
-    hash2: string;
-    timeStamp: string;
-    transaction: Transaction[];
-    tradeAmount: string;
-    rate: Rate;
-  }
+//   interface TransactionData {
+//     hash: string;
+//     hash2: string;
+//     timeStamp: string;
+//     transaction: Transaction[];
+//     tradeAmount: string;
+//     rate: Rate;
+//   }
   
   export interface Block1Data extends BlockData {}
   export interface Block2Data extends BlockData {
